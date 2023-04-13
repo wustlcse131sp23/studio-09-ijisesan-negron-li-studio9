@@ -20,8 +20,25 @@ public class NameToHeight {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 
-		// FIXME
-		throw new NotYetImplementedException();
+		Map<String, Integer> phonebook = new HashMap<>();
 
+		phonebook.put("Freedom", 69);
+		phonebook.put("Marcus", 70);
+		phonebook.put("Temi", 65);
+		phonebook.put("Lindsey", 69);
+
+		boolean run = true;
+		while (run) {
+			System.out.println("Name?");
+			String name = in.next();
+			if (name.equals("quit")) {
+				run = false;
+			} else if (phonebook.get(name)!=null){
+				System.out.println("Height is " + phonebook.get(name));
+			} else {
+				System.out.println("Name is not within database");
+			}
+
+		}
 	}
 }
